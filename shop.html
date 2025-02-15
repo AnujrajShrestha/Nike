@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike</title>
+    <link href="https://www.nike.com/favicon.ico?v=1" rel="icon" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="shop.css">
+</head>
+
+<body class="column">
+    <header>
+        <nav class="row">
+            <svg aria-hidden="true" class="swoosh-svg" focusable="false" viewBox="0 0 24 24" role="img" width="55px"
+                height="74px" fill="none">
+                <path fill="currentColor" fill-rule="evenodd"
+                    d="M21 8.719L7.836 14.303C6.74 14.768 5.818 15 5.075 15c-.836 0-1.445-.295-1.819-.884-.485-.76-.273-1.982.559-3.272.494-.754 1.122-1.446 1.734-2.108-.144.234-1.415 2.349-.025 3.345.275.2.666.298 1.147.298.386 0 .829-.063 1.316-.19L21 8.719z"
+                    clip-rule="evenodd"></path>
+            </svg>
+            <button class="dark" onclick="DarkMode()">Bright mode</button>
+            <i class="fa-solid fa-bag-shopping fa-2xl" alt="Cart list"></i>
+        </nav>
+        <div class="gap"></div>
+        <a href="index.html"><i class="fa-solid fa-left-long fa-2xl"></i></a>
+        <div class="column" style="justify-content: center;gap:8px;" id="best">
+        <h1 class="contact">Best selling</h1>
+        </div>
+        <div class="gap"></div>
+        <div class="row pro">
+            <h1 class="products">Featured products</h1>
+        </div>
+            <div class="catgories">Categories</div>
+            <div class="list column">
+            <div class="sports">Sports</div>
+            <div class="winter">Winter collection</div>
+            <div class="summer">Summer colletion</div>
+            <div class="shose">Sneakers</div>
+            </div>
+            <div class="section"></div>
+        </header>
+        <main>
+        <div class="cart">
+            <i class="fa-solid fa-xmark fa-xl"></i>
+            <div class="column main-cart">
+                <button class="contact clear">Clear cart</button>
+                <div class="cart-list column">
+                </div>
+                <h1 class="Tolat">Total price</h1>
+            </div>
+        </div>
+        <section class="column payment-form">
+            <i class="fa-solid  fa-xmark fa-xl xmark"></i>
+            <h1>Payment Method</h1>
+            <form action="" class="payment column">
+                <div class="column" style="justify-content: center;">
+                <label for="country" class="country">Country</label>
+                    <select name="Country" id="country">
+                        <option value="Nepal">Nepal</option>
+                        <option value="India">India</option>
+                        <option value="China">China</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Norway">Norway</option>
+                    </select>
+                </div>
+                <div class="column" style="justify-content: center;">
+                <label for="cardno">Card Number</label>
+                    <input type="text" id="cardno" maxlength="19" onkeypress="cardspace()" required>
+                </div>
+                <div class="float column">
+                    <label for="validtill">Valid till</label>
+                        <input type="text" id="validtill" maxlength="10" onkeypress="addSlashes()" required>
+                </div>
+                <div class="column" style="justify-content: center;">
+                <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" maxlength="3" required>
+                </div>
+                <button class="pay">Pay</button>
+            </form>
+        </section>
+    </main>
+    <footer class="column">
+        <h1 class="contact">Contact us</h1>
+        <div class="foot row">
+            <div class="logo youtube">
+                <a href="https://www.youtube.com/@nike"><i class="fa-brands fa-youtube fa-xl"></i></a>
+            </div>
+            <div class="logo facebook">
+                <a href="https://www.facebook.com/nike"><i class="fa-brands fa-facebook fa-xl"></i></a>
+            </div>
+            <div class="logo instagram">
+                <a href="https://www.instagram.com/nike/"><i class="fa-brands fa-instagram fa-xl"></i></a>
+            </div>
+            <div class="logo x">
+                <a href="https://x.com/Nike"><i class="fa-brands fa-x fa-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script src="cart.js"></script>
+<script src="payment.js"></script>
+</html>

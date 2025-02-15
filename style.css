@@ -1,0 +1,624 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: clamp(20px, 8vw, 12px);
+    text-align: center;
+    color: inherit;
+    background-color: inherit;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    transition: 0.5s;
+    background-color: black;
+    color: #fff;
+    justify-content: center;
+}
+
+@keyframes autoshowAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(200px) scale(0.3);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes nav_ani {
+    0% {
+        transform: translateY(-200px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fade_in {
+    0% {
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes log {
+    0%{
+        transform: scale(0);
+        opacity: 0.3;
+    }100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.fade-out {
+    animation: fade_out 1s linear forwards;
+}
+
+@keyframes fade_out {
+    0%{
+        opacity: 1;
+        transform: scale(1);
+    }100%{
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.column {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+nav {
+    justify-content: space-between;
+    position: fixed;
+    width: 100vw;
+    height: 90px;
+    z-index: 2;
+    animation: nav_ani 1s ease-in-out;
+    border-bottom: solid 3px rgba(80, 65, 30, 0.6);
+}
+
+ul {
+    justify-content:start;
+    list-style: none;
+    gap: 20px;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav ul a li {
+    position: relative;
+    list-style: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    filter: none;
+    font-size: 18px;
+
+    &&:hover {
+        transition: 0.5s;
+        color: red;
+    }
+
+    &&::after {
+        content: '';
+        width: 0%;
+        height: 3px;
+        background: #ff004f;
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        transition: 0.5s;
+    }
+
+    &&:hover::after {
+        transition: 0.5s;
+        width: 100%;
+    }
+}
+
+header nav .fa-solid {
+    display: none;
+}
+
+header .fa-bars{
+    display: none;
+}
+
+.btn{
+    justify-content: end;
+    gap: 10px;
+}
+
+.btn .button2,.main_login .button2,.main_signup .button2{
+    border: solid 2px #03AEC2;
+    z-index: 2;
+    transition: 1s;
+    border-radius: 1rem;
+    width: 100px;
+    &&:hover{
+        letter-spacing: 2px;
+        transition: 1s;
+        background-color: #03AEC2;
+    }
+}
+
+.btn .button2{
+    position: relative;
+    left: -10%;
+}
+
+.shop-now{
+    position:fixed;
+    top: 16%;
+    right: 0%;
+    border: solid 2px #03AEC2;
+    z-index: 2;
+    transition: 1s;
+    border-radius: 1rem;
+    width: 100px;
+    &&:hover{
+        letter-spacing: 2px;
+        transition: 1s;
+        background-color: #03AEC2;
+    }
+}
+
+.dark {
+    background-color: #fff;
+    color: black;
+    position: fixed;
+    top: 17%;
+    left: 0;
+    width: 130px;
+    height: 35px;
+    border-radius: 1rem;
+    z-index: 2;
+}
+
+.gap {
+    width: 100vw;
+    height: 100px;
+}
+
+section {
+    justify-content: center;
+    animation: autoshowAnimation both;
+    animation-timeline: view(70% 5%);
+}
+
+.video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 480px;
+    width: 100%;
+    overflow: hidden;
+}
+
+video {
+    width: 97%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    animation: fade_in 2.5s linear;
+}
+
+
+.fade {
+    animation: fade_in 5s linear;
+}
+
+.right,
+.left {
+    width: 50px;
+    height: 50px;
+    border: solid 1px rgb(247, 51, 2);
+    background-color: transparent;
+    border-radius: 50%;
+
+    &&:hover {
+        box-shadow: 0 0 60px rgb(247, 52, 3);
+        transition: 0.8s;
+    }
+}
+
+main {
+    justify-content: center;
+}
+
+.image2 img {
+    width: 360px;
+    height: 240px;
+    border-radius: 1rem;
+    animation: fade_in 2s linear;
+
+}
+
+.image2 {
+    justify-content: center;
+}
+
+.image2 img:not(:first-child) {
+    display: none;
+}
+
+.back {
+    position: relative;
+}
+
+.back img {
+    transition: 1s;
+    height: 400px;
+    width: 100vw;
+}
+
+.sp-flex:hover .item:hover {
+    filter: none;
+    transition: 0.4s;
+    transform: scale(1.4);
+}
+
+.item {
+    transition: 0.8s;
+    filter: grayscale(1) blur(4px);
+}
+
+.sp-flex {
+    height: 300px;
+    position: absolute;
+    width: 100vw;
+    justify-content: space-evenly;
+    display: flex;
+    background-color: transparent;
+    align-items: center;
+    flex-direction: row;
+}
+
+.item img {
+    width: 18vw;
+    height: 300px;
+    transform: scale(0.9);
+}
+
+.tracks {
+    justify-content: center;
+    height: 600px;
+    width: 55%;
+    border-radius: 1rem;
+    background-color: gray;
+}
+
+.main {
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 150px;
+    position: relative;
+    top: -15%;
+}
+
+.section{
+    width: 100%;
+    height: 370px;
+    position: relative;
+    top: -15%;
+}
+
+.five,
+.two,
+.three,
+.four {
+    display: none;
+    align-content: center;
+}
+
+.main img {
+    border-radius: 1rem;
+    width: 100%;
+    height: 150px;
+    animation: fade_in 2s linear;
+}
+
+.one,.two,.three,.four,.five {
+    height: 370px;
+    width: 100%;
+}
+
+.one img,.two img,.three img,.four img,.five img {
+    width: 60%;
+    height: 370px;
+    border-radius: 1rem;
+    animation: fade_in 1s linear;
+}
+
+.four img{
+    border-radius: 1rem;
+    height: 370px;
+    width: 80%;
+    position: relative;
+    left: 27%;
+}
+
+.foot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: #727171a7 solid 1px;
+}
+
+.youtube {
+    transition: 1s;
+
+    &&:hover {
+        transition: 1s;
+        background-color: red;
+    }
+}
+
+.facebook {
+    transition: 1s;
+
+    &&:hover {
+        transition: 1s;
+        background-color: rgba(7, 90, 214, 0.753);
+    }
+}
+
+.instagram {
+    transition: background 3s ease;
+
+    &&:hover {
+        transition: background 3s ease;
+        background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 45px;
+    height: 800px;
+}
+
+.container {
+    gap: 40px;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    border: solid 2px #03AEC2;
+    border-radius: 1rem;
+    height: 60vh;
+    width: 70%;
+    animation: autoshowAnimation both;
+    animation-timeline: view(70% 5%);
+}
+
+p {
+    animation: autoshowAnimation both;
+    animation-timeline: view(70% 5%);
+
+}
+
+.contact {
+    font-size: 27px;
+    animation: autoshowAnimation both;
+    animation-timeline: view(70% 5%);
+    border-radius: 1rem;
+    width: 220px;
+    height: 40px;
+    transition: 0.5s;
+
+    &&:hover {
+        letter-spacing: 2px;
+        transition: 1.2s cubic-bezier(.87, -1.38, .03, 1.54);
+        box-shadow: 0 0 15px #03AEC2;
+        background-color: #03AEC2;
+    }
+}
+
+label {
+    position: relative;
+    transform: translateY(25px);
+    left: -25;
+    transition: 0.5s;
+    font-size: 17px;
+    text-transform: capitalize;
+    z-index: 1;
+    color: inherit;
+    background-color: transparent;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+input {
+    background-color: inherit;
+    width: 225px;
+    height: 45px;
+    border-radius: 1rem;
+    font-size: 1em;
+}
+
+.message {
+    width: 100%;
+    height: 120px;
+}
+
+button:not(.dark, .left, .right) {
+    width: 150px;
+    height: 40px;
+    border-radius: 1rem;
+    background-color: transparent;
+
+    &&:hover {
+        transition: 0.5s;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+}
+
+.msg {
+    width: 60%;
+}
+
+.x {
+    transition: 1s;
+
+    &&:hover {
+        transition: 1s;
+        color: #fff;
+        background-color: black;
+    }
+}
+
+header nav .fa-solid {
+    display: none;
+}
+
+.login,.signup{
+    display:none;
+    position: fixed;
+    left: 28;
+    top: 8%;
+    width: 35vw;
+    height:350px;
+    border-radius: 1rem;
+    box-shadow:  0px 0px 30px rgba(227,228,237,0.37);
+    border: 1.5px solid rgba(255,255,255,0.18);
+    animation: log 1s linear;
+    font-weight: 800;
+}
+
+.login{
+    height: 200px;
+    top: 30%;
+}
+
+.main_login,.main_signup{
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.blur{
+    width: 100vw;
+    height:100vh;
+    filter: blur(8px);
+    z-index: 3;
+}
+
+.xmark,.xmark2{
+    position: relative;
+    left: 45%;
+    top: 3%;
+}
+
+.main_login form,.main_signup form{
+    justify-content: center;
+}
+
+@media only screen and (max-width:755px) {
+    .tracks {
+        width: 80%;
+    }
+
+    .container {
+        width: 70%;
+        height: 600px;
+    }
+
+    header nav .fa-solid {
+        display: block;
+    }
+
+    header .fa-bars{
+        display: block;
+        position: fixed;
+        top: 5%;
+        left:2%;
+    }
+
+    nav {
+        position: fixed;
+        background-color: skyblue;
+        height: 100vh;
+        width: 35vw;
+        left: -500px;
+        transition: 1s;
+
+    }
+    header nav .fa-xmark {
+        position: absolute;
+        top:3%;
+        left: 85%;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .btn .button2{
+        border: solid 1px red;
+        &&:hover{
+            background-color: red;
+        }
+    }
+    .login,.signup{
+        width: 55vw;
+    }
+}
+
+@media only screen and(max-width:455px) {
+    .sliders {
+        width: 40%;
+    }
+}

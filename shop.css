@@ -1,0 +1,396 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: clamp(15px, 8vw, 12px);
+    text-align: center;
+    background-color: inherit;
+    color: inherit;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    transition:0.4s;
+    background-color: black;
+    color: #fff;
+    justify-content: center;
+}
+
+@keyframes autoshowAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(200px) scale(0.3);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes nav_ani {
+    0% {
+        transform: translateY(-200px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fade_in {
+    0% {
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes log {
+    0%{
+        transform: scale(0);
+        opacity: 0.3;
+    }100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.column {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+nav {
+    justify-content: space-between;
+    position: fixed;
+    width: 100vw;
+    height: 90px;
+    z-index: 2;
+    animation: nav_ani 1s ease-in-out;
+    border-bottom: solid 3px rgba(80, 65, 30, 0.6);
+}
+
+nav i{
+    position: relative;
+    left: -3%;
+}
+
+.dark {
+    background-color: #fff;
+    color: black;
+    width: 130px;
+    height: 35px;
+    border-radius: 1rem;
+}
+
+.gap{
+    width: 100vw;
+    height: 120px;
+}
+
+#best img{
+    height: 350px;
+    width: 40vw;
+    border-radius: 1rem;
+    animation: fade_in 2s ease-out;
+}
+
+img{
+    animation: fade_in 2s ease-out;
+
+}
+
+.section{
+    columns: 300px;
+}
+
+.catgories{
+    position: relative;
+    border-radius: 1rem;
+    left: 2%;
+    border: solid 2px #03AEC2;
+    width: 180px;
+    height: 30px;
+    align-content: center;
+    animation: fade_in 3.5s ease-out;
+}
+
+.list{
+    display: none;
+    justify-content: center;
+    position: absolute;
+    left: 15%;
+    top: 85%;
+    background-color: #353f401d;
+    border-radius: 1rem;
+    gap: 8px;
+    animation:  log 1s linear;
+}
+
+.imageC{
+    border-radius: 1rem;
+    margin: 15px;
+    background-color: gray;
+    justify-content: space-evenly;
+    gap: 18px;animation: autoshowAnimation both;
+    animation-timeline: view(50% 5%);
+}
+
+.imageC img{
+    border-radius: 1rem;
+    height: 280px;
+    width: 90%;
+}
+
+.imageC input{
+    border-radius: 1rem;
+}
+
+.btn{
+    width: 155px;
+    border-radius: 1rem;
+    background-color: gold;
+    height: 40px;
+    font-weight: 600;
+    color: black;
+    transition: 0.5s;
+    &&:hover{
+        transform: 0.5s;
+        background-color: inherit;
+    }
+}
+
+.products{
+    text-align: center;
+    height: 40px;
+    border-radius: 1rem;
+    width: 350px;
+    font-size: 30px;
+    font-weight: 800;
+    transition: 1s;
+    animation: fade_in 3.5s ease-out;
+    &&:hover{
+        transition: 1s;
+        letter-spacing: 3px;
+        background-color:#03AEC2;
+    }
+}
+
+.pro{
+    justify-content: center;
+}
+
+.cart{
+    position: fixed;
+    top: 0;
+    left: -950px;
+    height: 100vh;
+    width: 62vw;
+    z-index: 3;
+    transition: 1s;
+    border-right: solid 3px #03AEC2;
+}
+
+.main-cart{
+    justify-content:space-evenly;
+    height: 90vh;
+}
+
+.cart i{
+    position: relative;
+    top: 5%;
+    right: -46%;
+}
+
+footer{
+    height: 500px;
+    justify-content: center;
+}
+
+.foot {
+    justify-content: center;
+    gap: 15px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: #727171a7 solid 1px;
+}
+
+.youtube {
+    transition: 1s;
+
+    &&:hover {
+        transition: 1s;
+        background-color: red;
+    }
+}
+
+.facebook {
+    transition: 1s;
+
+    &&:hover {
+        transition: 1s;
+        background-color: rgba(7, 90, 214, 0.753);
+    }
+}
+
+.instagram {
+    transition: background 3s ease;
+
+    &&:hover {
+        transition: background 3s ease;
+        background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    }
+}
+
+.contact {
+    font-size: 27px;
+    animation: autoshowAnimation both;
+    animation-timeline: view(70% 5%);
+    border-radius: 1rem;
+    width: 220px;
+    height: 40px;
+    transition: 0.5s;
+    &&:hover {
+        letter-spacing: 2px;
+        transition: 1.2s cubic-bezier(.87, -1.38, .03, 1.54);
+        box-shadow: 0 0 15px #03AEC2;
+        background-color: #03AEC2;
+    }
+}
+
+.main-cart .contact{
+    width: 150px;
+    &&:hover{
+        width: 180px;
+    }
+}
+
+.main-cart h1{
+    border: solid 4px #727171a7;
+}
+
+.fa-left-long{
+    position: fixed;
+    left: 0;
+}
+
+.cart-list {
+    justify-content:center;
+    gap: 8px;
+    flex-wrap: nowrap;
+    /* background-color: #03AEC2; */
+    width: 90%;
+    height: 80%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.cart-item{
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    border: dotted 2px gray;
+    width: 90%;
+    height: 15%;
+}
+
+.payment-form{
+    justify-content:space-evenly;
+    position: fixed;
+    display: none;
+    left: 33%;
+    top: 15%;
+    width:350px;
+    height: 380px;
+    border-radius: 1rem;
+    color: black;
+    background-color: #fff;
+    box-shadow: 0 0 60px rgb(49, 98, 62);
+    animation:  log 1.5s ease-out;
+    z-index: 3;
+}
+
+form{
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+form label:not(.country) {
+    position: relative;
+    transform: translateY(25px);
+    left: -25;
+    transition: 0.5s;
+    font-size: 20px;
+    text-transform: capitalize;
+    z-index: 1;
+    color: inherit;
+    background-color: transparent;
+}
+
+form input{
+    border-radius: 1rem;
+    height: 40px;
+    width: 100%;
+}
+
+.fa-xmark{
+    position: relative;
+    left: 45%;
+    top: 3%;
+}
+
+.pay{
+    border-radius: 1rem;
+    width: 50%;
+    height: 45px;
+    border: 2px solid #03AEC2;
+    transition: 1s;
+    &&:hover{
+        transition: 1s;
+        background-color: #03AEC2;
+    }
+}
+
+@media only screen and (max-width:755px){
+    .payment-form{
+        width: 55vw;
+    }
+}
+
+@media only screen and (max-width:455px){
+    .payment-form{
+        width: 65vw;
+        left: 20%;
+    top: 15%;
+    }
+
+    .cart{
+        width: 92vw;
+    }
+}
