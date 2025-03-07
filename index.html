@@ -14,7 +14,6 @@
     <header>
         <nav class="row">
             <div class="row" style="width: 60%;">
-        <!-- <img src="nike.svg" alt="" height="24px" width="40px"> -->
         <svg aria-hidden="true" class="swoosh-svg" focusable="false" viewBox="0 0 24 24" role="img" width="55px"
         height="74px" fill="none">
         <path fill="currentColor" fill-rule="evenodd"
@@ -35,7 +34,7 @@
             </div>
         </nav>
         <i class="fa-solid fa-bars"></i>
-        <a href="shop.html"><button class="shop-now">Shop  now</button></a>
+        <a href="shop.html" class="shop"><button class="shop-now">Shop  now</button></a>
         <div class="gap" id="home"></div>
         <div class="gap"></div>
         <button class="dark" onclick="mode()">Bright mode</button>
@@ -58,14 +57,14 @@
         <section class="column">
             <h1 class="contact">Our products</h1>
             <br>
+            <div class="image2" id="side">
+                <img src="shose.png" alt="" loading="lazy">
+                <img src="shose2.png" alt="" loading="lazy">
+                <img src="shose3.jpg" alt="" loading="lazy">
+                <img src="shose4.png" alt="" loading="lazy">
+            </div>
             <div class="sliders row">
                 <button class="left"><i class="fa-solid fa-caret-left"></i></button>
-                <div class="image2" id="side">
-                    <img src="shose.png" alt="" loading="lazy">
-                    <img src="shose2.png" alt="" loading="lazy">
-                    <img src="shose3.jpg" alt="" loading="lazy">
-                    <img src="shose4.png" alt="" loading="lazy">
-                </div>
                 <button class="right"><i class="fa-solid fa-caret-right"></i></button>
             </div>
             <br>
@@ -240,5 +239,7 @@
     </form>
     </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="gsap.js"></script>
 <script src="script.js" defer></script>
 </html>

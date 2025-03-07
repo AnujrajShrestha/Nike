@@ -99,7 +99,7 @@ nav {
     width: 100vw;
     height: 90px;
     z-index: 2;
-    animation: nav_ani 1s ease-in-out;
+    /* animation: nav_ani 1s ease-in-out; */
     border-bottom: solid 3px rgba(80, 65, 30, 0.6);
 }
 
@@ -228,12 +228,18 @@ video {
     height: 100%;
     object-fit: cover;
     border-radius: 1rem;
-    animation: fade_in 2.5s linear;
+    /* animation: fade_in 2.5s linear; */
 }
 
 
 .fade {
     animation: fade_in 5s linear;
+}
+
+.sliders{
+    justify-content: space-around;
+    width: 25vw;
+    flex-wrap: nowrap;
 }
 
 .right,
@@ -562,6 +568,11 @@ header nav .fa-solid {
 .main_login form,.main_signup form{
     justify-content: center;
 }
+
+button,a,i{
+    cursor: pointer;
+}
+
 
 @media only screen and (max-width:755px) {
     .tracks {
